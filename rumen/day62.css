@@ -23,7 +23,7 @@
     background-color: gray;
 }
 
-div > span {
+div span {
     font-size: 20px;
     color: white;
     margin-right: 20px;
@@ -32,10 +32,12 @@ div > span {
 
 div :first-child {
     margin-left: 15px;
+    color: blueviolet;
 }
 
 div :last-child {
     margin-right: 15px;
+    color: chocolate;
 }
 
 #button {
