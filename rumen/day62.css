@@ -1,0 +1,53 @@
+#nav-box {
+    margin-top: 1px;
+    white-space: nowrap;
+    background-color: #0077ff;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: aquamarine;
+    text-align: center;
+}
+
+.line {
+    height: 1px;
+    background-color: gray;
+}
+
+div > span {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    line-height: 40px;
+}
+
+div :first-child {
+    margin-left: 15px;
+}
+
+div :last-child {
+    margin-right: 15px;
+}
+
+#button {
+    height: 40px;
+    line-height: 40px;
+    background-color: #0077ff;
+    border-radius: 4px;
+    color: white;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#d {
+    color: red;
+}
