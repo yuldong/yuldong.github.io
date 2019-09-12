@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 选择器</title>
+    <style>
+        /* 标签选择器: HTML 标签 */
+        p {
+            color: red;
+        }
+        /* 组选择器: A 和 B元素具有同一规则的CSS样式，不同元素使用逗号隔开。 */
+        div, p {
+            color: darkgreen;
+        }
+        /* class 选择器: 以 "." 开头，后跟名称，可作用与多个html标签。 */
+        .first {
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+        /* ID 选择器:  以 "#" 开头，后跟名称，名称必须在当前文档唯一。 */
+        #second {
+            color: blue;
+        }
+        /* 通用选择器: 作用于所有标签。 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 属性选择器: 根据属性以及相关的条件来匹配HTML元素。 */
+        /* =, ~=, ^=, $=, *= */
+        [lefe] {
+            color: green;
+        }
+        /* 匹配使用属性"lefe"，且值为"liquid" */
+        [lefe="liquid"] {
+            background-color: goldenrod;
+        }
+        /* 匹配使用属性"lefe"，且值包含"spicy" */
+        [lefe~="spicy"] {
+            color: red;
+        }
+        /* 伪选择器: 包含伪类以及伪元素。 */
+        /* 伪类 */
+        a {
+            color: blue;
+            font-weight: bold;
+        }
+        a:visited {
+            color: yellow;
+        }
+        a:hover, :active, :focus {
+            color: darkred;
+            text-decoration: none;
+        }
+        /* 伪元素 */
+        p::first-letter {
+            font-weight: bold;
+        }
+        p::first-line {
+            font-size: 2em;
+        }
+        [href^="http"]::after {
+            content:"➡"️;
+        }
+        /* 组合选择器: 通过组合作用于HTML组合 1、A B {} 2、A > B {} 3、A + B {}*/
+        div p {
+            color: blueviolet;
+        }
+        div > p {
+            color: bisque;
+        }
+        div ~ p {
+            color: cadetblue;
+        }
+        div + p {
+            color: aquamarine;
+        }
+
+        /* @规则 */
+        /* 用于传递元数据、条件信息活其他描述性信息。 
+        它们以@开头，后跟一个标识符来说明它是什么类型的规则。
+        然后是某种类型的语法块，以分号";"结尾。*/
+        /* @charset(metadata), @import(metadata), @media or @document(条件，嵌套申明), @font-face(描述信息) */
+        @media (min-width: 801px) {
+            body {
+                margin: 0 auto;
+                background-color: azure;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="first">超越技术</p>
+    <dvi>
+        哈哈
+    </div>
+    <p id="second">一起学前端</p>
+    <ul>
+        <li data-quantity="1kg" lefe>Tomatoes</li>
+        <li data-quantity="3" lefe>Onions</li>
+        <li data-quantity="3" lefe>Garlic</li>
+        <li data-quantity="700g" lefe="not spicy like chili">Red pepper</li>
+        <li data-quantity="2kg" data-meat>Chicken</li>
+        <li data-quantity="optional 150g" data-meat>Bacon bits</li>
+        <li data-quantity="optional 150g" lefe="liquid">Olive oil</li>
+        <li data-quantity="25cl" lefe="liquid">White wine</li>
+    </ul>
+    <a href="https://developer.mozilla.org/" target="_blank">Click me</a>
+    <p>Mozilla Developer Network</p>
+    <div>
+        <p>|__div->p1</p>
+        <p>|__div->p2</p>
+        <section>
+            <p>|____div->section->p1</p>
+            <p>|____div->section->p1</p>
+            <div>|____div->section->div</div>
+        </section>
+    </div>
+    <p>|__p1</p>
+    <p>|__p2</p>
+</body>
+</html>
