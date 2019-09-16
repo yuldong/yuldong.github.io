@@ -32,7 +32,6 @@ span {
     border: 20px solid;
     border-color: #f30;
     border-top: 20px solid transparent;
-    /* border-left: 20px solid blue; */
     border-bottom: 20px solid transparent;
     border-right: 20px solid transparent;
 }
