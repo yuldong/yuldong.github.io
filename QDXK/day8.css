@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+span {
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    color: burlywood;
+    font-weight: 600;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.des {
+    font-size: 17px;
+    padding: 10px;
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+.enter {
+    padding-top: 0px;
+    margin-top:0px;
+    color: blueviolet;
+}
+
+.num {
+    color: red;
+}
+
+.triangle {
+    width: 0;
+    border: 20px solid;
+    border-color: #f30;
+    border-top: 20px solid transparent;
+    /* border-left: 20px solid blue; */
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.icon {
+    background-color: antiquewhite;
+    width: 15px;
+    height: 15px;
+    border: 11px solid transparent;
+    
+}
