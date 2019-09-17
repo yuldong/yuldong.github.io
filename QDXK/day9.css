@@ -2,13 +2,19 @@ body {
     margin: 16px;
 }
 
+/* header {
+    display: flex;
+    flex-flow: row wrap;
+} */
+
 h1 {
+    display: block;
     font-size: 28px;
     font-weight: bold;
     color:black;
     border: 1px dotted rgb(253, 168, 168);
     text-align: center;
-    width: 240px;
+    /* width: 240px; */
     border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
