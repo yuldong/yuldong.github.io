@@ -1,0 +1,53 @@
+body {
+    margin: 16px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color:black;
+    border: 1px dotted rgb(253, 168, 168);
+    text-align: center;
+    width: 240px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.greet {
+    font-size: 18px;
+    color: #3f3e3f;
+    text-decoration: underline dotted #9b9b9b;
+}
+
+.des {
+    font-size: 16px;
+    color: #3f3e3f;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+[wo]::first-letter {
+    font-size: 30px;
+}
+
+em {
+    color: black;
+    font-size: 18px;
+}
+
+strong {
+    color: red;
+}
+
+.das-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+}
+
+@media (min-width: 700px) {
+    .das-box {
+        grid-template-columns: repeat(5, 120px);
+        grid-template-rows: repeat(2, 120px);
+    }
+}
