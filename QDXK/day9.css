@@ -42,12 +42,44 @@ strong {
 .das-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
 }
 
 @media (min-width: 700px) {
     .das-box {
         grid-template-columns: repeat(5, 120px);
-        grid-template-rows: repeat(2, 120px);
+        grid-template-rows: repeat(3, 120px);
     }
+}
+
+.das-box > div {
+    margin: 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+
+.das-box > div > p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.das-box div:nth-child(1) {
+    background-color: antiquewhite;
+}
+.das-box div:nth-child(2) {
+    background-color: cadetblue;
+}
+.das-box div:nth-child(3) {
+    background-color: rgb(114, 79, 33);
+}
+.das-box div:nth-child(4) {
+    background-color: rgb(207, 151, 77);
+}
+.das-box div:nth-child(5) {
+    background-color: rgb(70, 105, 81);
+}
+.das-box div:nth-child(6) {
+    background-color: rgb(155, 57, 78);
 }
