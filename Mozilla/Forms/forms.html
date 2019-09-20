@@ -24,6 +24,16 @@
         <div class="button">
             <button type="submit">Send your message</button>
         </div>
+        <div>
+            <label for="beans">How many beans can you eat?</label>
+            <input type="range" name="beans" id="beans" min="0" max="50" step="10" value="20">
+            <span id="beancount">10</span>
+        </div>
+        <div>
+            <meter min="0" max="10" value="75" low="33" high="66" optimum="50"></meter>
+        </div>
     </form>
 </body>
+<script src="./scripts/forms.js">
+</script>
 </html>
