@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/form-valid.css">
+    <title>验证</title>
+</head>
+<body>
+    <form>
+        <p>
+            <fieldset>
+                <legend>
+                    Title <abbr title="This field is mandaory">*</abbr>
+                </legend>
+                <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Mr.</label>
+                <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Ms.</label>
+            </fieldset>
+        </p>
+        <p>
+            <label for="n1">How old are you?</label>
+            <input type="number" min="12" max="120" step="1" id="n1" name="age" pattern="\d+">
+        </p>
+        <p>
+            <label for="t1">What's your favorite fruit? <abbr title="This field is mandaory">*</abbr></label>
+            <input type="text" id="t1" name="fruit" list="11" required pattern="[Bb]anana|[Cc]herry|[Aa]pple">
+            <datalist id="11">
+                <option value="Banana"></option>
+                <option value="Apple"></option>
+                <option value="Cherry"></option>
+            </datalist>
+        </p>
+        <p>
+            <label for="t2">What's your e-mail?</label>
+            <input type="email" id="t2" name="email">
+        </p>
+        <p>
+            <label for="t3">Leave a messgae</label>
+            <textarea name="msg" id="t3" rows="5" maxlength="140"></textarea>
+        </p>
+        <p>
+            <button>Submit</button>
+        </p>
+    </form>
+
+    <form action="#" novalidate>
+        <p>
+            <label for="mail">
+                <span>Please enter an email address:</span>
+                <input type="email" id="mail" name="mail">
+                <span class="error" aria-live="polite"></span>
+            </label>
+        </p>
+        <button>Submit</button>
+    </form>
+    <script src="./scripts/forms-valid.js"></script>
+</body>
+</html>
