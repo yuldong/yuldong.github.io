@@ -1,14 +1,11 @@
 function sendData(data) {
     var XHR = new XMLHttpRequest();
-    var urlEncodedData = "";
-    var urlEncodedDataPairs = [];
 
-    var name;
+    var FD = new FormData();
+
     for(name in data) {
-        urlEncodedDataPairs.push(encodeURIComponent(name) + encodeURIComponent(data[name]));
+        FD.append(name, data[name]);
     }
-
-    urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, '+');
 
     XHR.addEventListener('load', function(event) {
         alert('耶! 已发送数据并加载响应。');
@@ -23,5 +20,5 @@ function sendData(data) {
 
     XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    XHR.send(urlEncodedData);
+    XHR.send(FD);
 }
