@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猜数字</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>猜数字游戏</h1>
+    <p>
+        我刚才随机选定了一个100以内的自然数。看你能否在10次以内猜中它。
+        每次我都会告诉你所猜的结果是高了还是低了。
+    </p>
+    <div>
+        <div>
+            <label for="guessField">请猜数:</label>
+            <input type="text" id="guessField" class="guessField">
+            <button type="submit" class="guessSubmit">确定</button>
+        </div>
+    </div>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+</body>
+<script>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    const guesses = document.querySelector(".guesses");
+    const lastResult = document.querySelector(".lastResult");
+    const lowOrHi = document.querySelector(".lowOrHi");
+
+    const guessSubmit = document.querySelector(".guessSubmit");
+    const guessFiled= document.querySelector(".guessField");
+
+    let guessCount = 1;
+    let resetButton;
+    guessFiled.focus();
+
+    function checkGuess() {
+        let userGuess = Number(guessFiled.value);
+
+        if (guessCount === 1) {
+            guesses.textContent = "上次猜的数：";
+        }
+        guesses.textContent += userGuess + " ";
+
+        if (userGuess === randomNumber) {
+            lastResult.textContent = "恭喜你！猜对了";
+            lastResult.style.backgroundColor = 'green';
+            lowOrHi.textContent = "";
+        } else if (guessCount === 10) {
+            lastResult.textContent = "!!!GAME OVER!!!";
+            setGameOver();
+        } else {
+            lastResult.textContent = "你猜错了！";
+            lastResult.style.backgroundColor = 'red';
+
+            if (userGuess < randomNumber) {
+                lowOrHi.textContent = "你猜低了";
+            } else if (userGuess > randomNumber) {
+                lowOrHi.textContent = "你猜高了";
+            }
+        }
+        guessCount++;
+        guessFiled.value = "";
+        guessFiled.focus();
+    }
+
+    function setGameOver() {
+        guessSubmit.disabled = true;
+        guessFiled.disabled =  true;
+        resetButton = document.createElement('button');
+        resetButton.textContent = '重新开始';
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener('click', resetGame);
+    }
+
+    function resetGame() {
+        guessCount = 1;
+
+        const resetParas = document.querySelectorAll('.resultParas p');
+        for (let i = 0; i < resetParas.length; i++) {
+            const element = resetParas[i];
+            element.textContent = '';
+        }
+
+        resetButton.parentNode.removeChild(resetButton);
+
+        guessFiled.disabled = false;
+        guessSubmit.disabled = false;
+
+        guessFiled.value = "";
+        guessFiled.focus();
+
+        lastResult.style.backgroundColor = 'white';
+
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+    }
+
+    guessSubmit.addEventListener('click', checkGuess);
+</script>
+</html>
