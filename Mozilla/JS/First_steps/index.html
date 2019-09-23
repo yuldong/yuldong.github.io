@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./ui.js" defer></script>
+    <title>笑话生成器</title>
+</head>
+<body>
+    <div>
+        <label for="customname" id="lbl-customname">请输入自定义的名字:</label>
+        <input type="text" id="customname" placeholder="李雷">
+    </div>
+    <div>
+        <label for="cn" id="lbl-cn">中国</label><input type="radio" id="cn" name="country" value="cn" checked>
+        <label for="us" id="lbl-us">美国</label><input type="radio" id="us" name="country" value="us">
+        <label for="uk" id="lbl-uk">英国</label><input type="radio" id="uk" name="country" value="uk">
+    </div>
+    <div>
+        <button class="randomize">随机生成笑话</button>
+    </div>
+    <p class="story">
+
+    </p>
+</body>
+</html>
