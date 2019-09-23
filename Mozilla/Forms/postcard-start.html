@@ -7,6 +7,26 @@
     <title>Postcard</title>
 </head>
 <body>
-    
+    <form action="">
+        <h1>to: Mozilla</h1>
+        <div id="from">
+            <label for="name">from:</label>
+            <input type="text" id="name" name="user_name">
+        </div>
+
+        <div id="reply">
+            <label for="mail">reply:</label>
+            <input type="email" id="mail" name="user_email">
+        </div>
+
+        <div id="message">
+            <label for="msg">Your message:</label>
+            <textarea name="user_message" id="msg"></textarea>
+        </div>
+
+        <div class="button">
+            <button type="submit">Send your message</button>
+        </div>
+    </form>
 </body>
 </html>
