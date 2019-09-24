@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    width: 350px;
-    border: 1px solid;
+    /* width: 80%; */
+    /* border: 1px solid; */
     padding: 1em;
 }
 
@@ -24,3 +24,22 @@ p {
     padding: 10px;
     visibility: hidden;
 }
+
+.calendar {
+    box-sizing: border-box;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    display: block;
+    float: left;
+    width: 20%;
+    border: 2px solid white;
+    padding: 5px;
+    height: 30px;
+    background-color: #4A2DB6;
+    color: white;
+  }

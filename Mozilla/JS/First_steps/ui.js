@@ -86,3 +86,35 @@ function result() {
     story.textContent = newStory;
     story.style.visibility = "visible";
 }
+
+
+var select = document.querySelector("select");
+var h1 = document.querySelector("h1");
+var list = document.querySelector("ul");
+
+select.onchange = function () {
+    let choice = select.value;
+    let days = 31;
+
+    if (choice === "Fabruary") {
+        days = 28;
+    } else if (choice === 'April' || 
+        choice === 'June' || 
+        choice === 'September'|| 
+        choice === 'November') {
+        days = 30;
+    }
+    createCalendar(days, choice);
+};
+
+function createCalendar(days, choice) {
+    list.innerHTML = "";
+    h1.textContent = choice;
+    for (let i = 0; i < days; i++) {
+        const element = document.createElement("li");
+        element.textContent = i + 1;
+        list.appendChild(element);      
+    }
+}
+
+createCalendar(31, "January");
