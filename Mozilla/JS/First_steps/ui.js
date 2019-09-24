@@ -1,3 +1,7 @@
+const customName = document.getElementById("customname");
+const randomize = document.querySelector(".randomize")
+const story = document.querySelector(".story");
+
 document.getElementById("cn").onclick = () => {
     document.title = "笑话呵呵哒";
     document.getElementById("lbl-customname").textContent = "请输入自定义的名字：";
@@ -7,6 +11,7 @@ document.getElementById("cn").onclick = () => {
     document.getElementById("customname").textContent = "李雷";
     document.getElementById("customname").placeholder = "张雷";
     document.querySelector(".randomize").textContent = "随机生成笑话";
+    document.querySelector(".story").textContent = "";
 };
 
 document.getElementById("us").onclick = 
@@ -20,11 +25,8 @@ document.getElementById("uk").onclick =
     document.getElementById("customname").textContent = "Bob";
     document.getElementById("customname").placeholder = "Mary";
     document.querySelector(".randomize").textContent = "Generate random story";
+    document.querySelector(".story").textContent = "";
 };
-
-const customName = document.getElementById("customname");
-const randomize = document.querySelector(".randomize")
-const story = document.querySelector(".story");
 
 function randomValueFromArray(array) {
     return array[Math.floor(Math.random() * array.length)];
