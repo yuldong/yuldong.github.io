@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random canvas circles</title>
+    <style>
+        html {
+            width: 100%;
+            height: inherit;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        button {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button>Update</button>
+    <canvas>
+
+    </canvas>
+    <script>
+        const btn = document.querySelector("button");
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+
+        let WIDTH = document.documentElement.clientWidth;
+        let HEIGHT = document.documentElement.clientHeight;
+
+        canvas.width = WIDTH;
+        canvas.height = HEIGHT;
+
+        function random(nummber) {
+            return Math.floor(Math.random() * nummber);
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+            for (let i = 0; i < 100; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+                ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+                ctx.fill();    
+            }
+        }
+
+        let antherDraw = draw;
+
+        btn.addEventListener("click", antherDraw);
+    </script>
+</body>
+</html>
