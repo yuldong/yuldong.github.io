@@ -41,6 +41,17 @@
         Person.prototype.farewell = function() {
             alert(this.name.first + " has left the building. Bye for now!");
         };
+
+        // Inheritance
+        function Teacher(first, last, age, gender, interests, subject) {
+            Person.call(this, first, last, age, gender, interests);
+            this.subject = subject
+        }
+
+        // 设置Teacher的原型
+        Teacher.prototype = Object.create(Person.prototype);
+        // 设置构造器引用
+        Teacher.prototype.constructor = Teacher;
     </script>
 </body>
 </html>
