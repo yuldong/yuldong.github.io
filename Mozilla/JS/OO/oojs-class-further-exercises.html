@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OO JS class further exercises</title>
+</head>
+<body>
+    <p>
+        This example requires you to enter commands in your browser's JavaSript console
+        (see <a href="#">What are browser developer tools</a> for more infomation).
+    </p>
+    <script>
+        function Person(first, last, age, gender, interests) {
+            this.name = {
+                first: first,
+                last: last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+            this.bio = function() {
+                let string = this.name.first + " " + this.name.last + " is" + this.age + " years old.";
+
+                let pronoun;
+                if (this.gender.toUpperCase() === "MALE" || this.gender.toUpperCase().indexOf("M")) {
+                    pronoun = "He likes";
+                } else if (his.gender.toUpperCase() === "female" || this.gender.toUpperCase().indexOf("F")) {
+                    pronoun = "She likes";
+                } else {
+                    pronoun = "They like";
+                }
+                alert(string);
+            };
+            this.greeting = function() {
+                alert("Hi, I\'m " + this.name + ".");
+            }
+        }
+
+        Person.prototype.farewell = function() {
+            alert(this.name.first + " has left the building. Bye for now!");
+        };
+    </script>
+</body>
+</html>
