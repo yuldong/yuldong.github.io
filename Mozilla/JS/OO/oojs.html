@@ -29,6 +29,22 @@
 
         // this: the current object the code is being written inside.
         //  指向了当前代码运行时的对象。
+
+        function createNewPerson(name) {
+            let obj = {};
+            obj.name = name;
+            obj.greeting = function() {
+                alert("I\'m " + this.name + ".");
+            };
+            return obj;
+        }
+
+        function Person(name) {
+            this.name = name;
+            this.greeting = function() {
+                alert("I\'m " + this.name + ".");
+            };
+        }
     </script>
 </body>
 </html>
