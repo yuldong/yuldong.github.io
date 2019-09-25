@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object-oriented JavaSript example</title>
+</head>
+<body>
+    <p>
+        This example requires you to enter commands in your browser's JavaSript console
+        (see <a href="#">What are browser developer tools</a> for more infomation).
+    </p>
+    <script>
+        let person = {
+            name: ["Bob", "Smith"],
+            age: 32,
+            gender: "male",
+            interests: ["Music", "skiing"],
+            bio: function() {
+                alert(this.name[0] + " " + this.name[1] + " is" + this.age + " years old, He likes " + this.interests[0] + " " + "and " + this.interests[1]);
+            },
+            greeting: function() {
+                alert("Hi, I\'m " + this.name.join(" ") + ".");
+            }
+        };
+        // 通过 . 访问
+        // 通过 [] 访问 (对象做了字符串到值的映射，也被称为关联数组))
+
+        // this: the current object the code is being written inside.
+        //  指向了当前代码运行时的对象。
+    </script>
+</body>
+</html>
