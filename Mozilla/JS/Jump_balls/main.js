@@ -19,16 +19,86 @@ function randomColor() {
     return "rgb(" + random(0, 255) + ", " + random(0, 255) + ", " + random(0, 255) + ")";
 }
 
-function Ball(x, y, velX, velY, color, size) {
+function Shape(x, y, velX, velY, exists) {
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
+    this.exists = exists;
+}
+
+function EvilCircle(x, y, exists) {
+    Shape.call(this, x, y, 20, 20, exists);
+    this.color = "white";
+    this.size = 40;
+}
+
+EvilCircle.prototype.draw = function() {
+    ctx.beginPath(3);
+    ctx.strokeStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+};
+
+EvilCircle.prototype.update = function() {
+    if ((this.x + this.size) > width) {
+        this.x -= this.size;
+    }
+    if ((this.x - this.size) <= 0) {
+        this.x += this.size;
+    }
+
+    if ((this.y + this.size) > height) {
+        this.y -= this.size;
+    }
+    if ((this.y - this.size) <= 0) {
+        this.y += this.size;
+    }
+};
+
+let remainBallsCount = BALLS_COUNT;
+EvilCircle.prototype.collisionDetect = function() {
+    for (let j = 0; j < balls.length; j++) {
+        const ball = balls[j];
+        if (ball.exists) {
+            let dx = this.x - ball.x;
+            let dy = this.y - ball.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < this.size + ball.size) {
+                ball.exists = false;
+                remainBallsCount--;
+                update();
+            }
+        } else {
+
+        }
+    }
+};
+
+EvilCircle.prototype.setControls = function() {
+    window.onkeydown = e => {
+        if (e.key === "a") {
+            this.x -= this.velX;
+        } else if (e.key === "d") {
+            this.x += this.velX;
+        } else if (e.key === "w") {
+            this.y -= this.velY;
+        } else if (e.key === "s") {
+            this.y += this.velY;
+        }
+    };
+}
+
+function Ball(x, y, velX, velY, exists, color, size) {
+    Shape.call(this, x, y, velY, velY, exists);
     this.color = color;
     this.size = size;
 }
 
-Ball.prototype.darw = function() {
+Ball.prototype = Object.create(Shape.prototype);
+Ball.prototype.constructor = Ball;
+
+Ball.prototype.draw = function() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -63,27 +133,45 @@ Ball.prototype.collisionDetect = function() {
     }
 };
 
+const evilCircle = new EvilCircle(
+    random(0, width), 
+    random(0, height), 
+    true);
+evilCircle.setControls();
+
 function loop() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
     ctx.fillRect(0, 0, width, height);
+
+    evilCircle.draw();
+    evilCircle.update();
+    evilCircle.collisionDetect();
 
     while (balls.length < BALLS_COUNT) {
         let ball = new Ball(
             random(0, width), 
             random(0, height), 
             random(-BALL_SPEED_MAX, BALL_SPEED_MAX), 
-            random(-BALL_SPEED_MAX, BALL_SPEED_MAX), 
+            random(-BALL_SPEED_MAX, BALL_SPEED_MAX),
+            true, 
             randomColor(), 
             random(BALL_SIZE_MIN, BALL_SIZE_MAX));
         balls.push(ball);
     }
 
     for (let i = 0; i < balls.length; i++) {
-        balls[i].darw();
-        balls[i].update();
-        balls[i].collisionDetect();
+        if (balls[i].exists) {
+            balls[i].draw();
+            balls[i].update();
+            balls[i].collisionDetect();
+        }
     }
     requestAnimationFrame(loop);
 }
 
 loop();
+
+function update() {
+    let para = document.querySelector('p');
+    para.textContent = "还剩" + remainBallsCount + "个球";
+}
