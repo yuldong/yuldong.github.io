@@ -6,10 +6,14 @@ const BALL_SPEED_MAX = 7
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+const para = document.querySelector("p");
+
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
 let balls = [];
+
+let count = 0;
 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -34,6 +38,7 @@ class EvilCircle extends Shape {
         super(x, y, 20, 20, exists);
         this.color = "white";
         this.size = 40;
+        this.setControls();
     }
 
     draw() {
@@ -68,8 +73,8 @@ class EvilCircle extends Shape {
                 let distance = Math.sqrt(dx * dx + dy * dy);
                 if (distance < this.size + ball.size) {
                     ball.exists = false;
-                    remainBallsCount--;
-                    update();
+                    count--;
+                    para.textContent = "还剩" + count + "个球";
                 }
             } else {
     
@@ -91,8 +96,6 @@ class EvilCircle extends Shape {
         };
     }
 }
-
-let remainBallsCount = BALLS_COUNT;
 
 class Ball extends Shape {
     constructor(x, y, velX, velY, exists, color, size) {
@@ -128,7 +131,7 @@ class Ball extends Shape {
                 let dx = this.x - ball.x;
                 let dy = this.y - ball.y;
                 let distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < this.size + ball.size) {
+                if (distance < this.size + ball.size && ball.exists) {
                     ball.color = this.color = randomColor();
                 }
             }
@@ -141,7 +144,6 @@ const evilCircle = new EvilCircle(
     random(0, width), 
     random(0, height), 
     true);
-evilCircle.setControls();
 
 function loop() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
@@ -161,6 +163,8 @@ function loop() {
             randomColor(), 
             random(BALL_SIZE_MIN, BALL_SIZE_MAX));
         balls.push(ball);
+        count++;
+        para.textContent = "还剩" + count + "个球";
     }
 
     for (let i = 0; i < balls.length; i++) {
@@ -174,8 +178,3 @@ function loop() {
 }
 
 loop();
-
-function update() {
-    let para = document.querySelector('p');
-    para.textContent = "还剩" + remainBallsCount + "个球";
-}
