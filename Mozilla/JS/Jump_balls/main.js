@@ -1,8 +1,13 @@
-const canvas = document.querySelector("canvas");
-let ctx = canvas.getContext("2d");
+const BALLS_COUNT= 25;
+const BALL_SIZE_MIN = 7;
+const BALL_SIZE_MAX = 20;
+const BALL_SPEED_MAX = 7
 
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+const width = canvas.width = window.innerWidth;
+const height = canvas.height = window.innerHeight;
 
 let balls = [];
 
@@ -62,8 +67,14 @@ function loop() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
     ctx.fillRect(0, 0, width, height);
 
-    while (balls.length < 100) {
-        let ball = new Ball(random(0, width), random(0, height), random(-7, 7), random(-7, 7), randomColor(), random(10, 20));
+    while (balls.length < BALLS_COUNT) {
+        let ball = new Ball(
+            random(0, width), 
+            random(0, height), 
+            random(-BALL_SPEED_MAX, BALL_SPEED_MAX), 
+            random(-BALL_SPEED_MAX, BALL_SPEED_MAX), 
+            randomColor(), 
+            random(BALL_SIZE_MIN, BALL_SIZE_MAX));
         balls.push(ball);
     }
 
