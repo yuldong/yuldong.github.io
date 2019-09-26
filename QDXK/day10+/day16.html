@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>更好的体验</title>
+    <style>
+        .bg-box {
+            background-color: gray;
+            width: 100px;
+            height: 100px;
+        }
+
+        .bg-box-animation {
+            animation: background-change 2s;
+        }
+
+        @keyframes background-change {
+            0% {
+                background-color: antiquewhite;
+            }
+            50% {
+                background-color: brown;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+
+        .move-box {
+            background-color: red;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+
+        .move-box-animation {
+            animation: move 5s ease-in-out 1s 2 alternate backwards;
+        }
+        
+        #move-transition-box {
+            background-color: cornflowerblue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .move-transition {
+            transition-property: background-color, height, width;
+            transition-duration: 1.8s, 1.0s, 1.0s;
+            transition-delay: 1s;
+            transition-timing-function: linear;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+                right: 0;
+            }
+            25% {
+                left: 100px;
+                top: 0;
+            }
+            50% {
+                left: 100px;
+                top: 100px;
+            }
+            75% {
+                left: 0;
+                top: 100px;
+            }
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-box bg-box-animation"></div>
+    <div class="move-box move-box-animation"></div>
+    <div id="move-transition-box" class="move-transition" onclick="scale()"></div>
+    <script>
+        function scale() {
+            let box = document.getElementById("move-transition-box");
+            box.style.height = "200px";
+            box.style.width = "200px";
+            box.style.backgroundColor = "brown";
+        }
+    </script>
+</body>
+</html>
