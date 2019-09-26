@@ -49,7 +49,7 @@
         .move-transition {
             transition-property: background-color, height, width;
             transition-duration: 1.8s, 1.0s, 1.0s;
-            transition-delay: 1s;
+            transition-delay: 0.1s;
             transition-timing-function: linear;
         }
 
@@ -84,9 +84,16 @@
     <script>
         function scale() {
             let box = document.getElementById("move-transition-box");
-            box.style.height = "200px";
-            box.style.width = "200px";
-            box.style.backgroundColor = "brown";
+            box.style.height = Math.random() * 200 + "px";
+            box.style.width = Math.random() * 200 + "px";
+            box.style.backgroundColor = getRandomColor();
+        }
+        function getRandomColor() {
+            var rgb='rgb('+Math.floor(Math.random() * 255) + ',' 
+            + Math.floor(Math.random() * 255) + ',' 
+            + Math.floor(Math.random() * 255) + ')';
+    
+            return rgb;
         }
     </script>
 </body>
