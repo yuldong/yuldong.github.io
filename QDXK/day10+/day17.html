@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>尺寸</title>
+    <style>
+        /* 相对单位：
+        font-size被用来计算相对单位的长度。
+        em：
+        相对于自身或者父元素的font-size来计算自身的尺寸
+        rem(font size of root element)：
+        根据 根元素html标签 的font-size来计算自身的尺寸
+        vh(viewport height)：
+        可视区域高度
+        vw：
+        可视区域宽度
+        vmin：
+        vw, vh中最小的
+        vmax：
+        vw, vh中最大的
+        */
+        html {
+            font-size: 20px;
+        }
+        body {
+            font-size: 20px;
+        }
+
+        .content {
+            width: 200px;
+            height: 300px;
+            font-size: 21px;
+            background-color: #258bd6;
+        }
+
+        .title {
+            width: 9em;
+            height: 4em;
+            /* font-size: 10px; */
+            background-color: #fe7235;
+        }
+
+        .title2 {
+            width: 2rem;
+            height: 3rem;
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="title"></div>
+        <div class="title2"></div>
+    </div>
+</body>
+</html>
