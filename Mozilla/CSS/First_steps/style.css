@@ -1,0 +1,37 @@
+h1 {
+    color: red;
+}
+
+p, li {
+    color: green;
+}
+
+li {
+    list-style-type: decimal;
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+li em {
+    font-weight: normal;
+    color: blueviolet; 
+}
+
+h1 + p {
+    color: brown;
+}
+
+a:link {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+}
