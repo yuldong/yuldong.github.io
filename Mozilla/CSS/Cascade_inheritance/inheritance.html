@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>层叠与继承</title>
+    <style>
+        /* cascade */
+        /* inheritance
+        1、inherit 开启继承
+        2、initial 与浏览器默认，没有则inherit
+        3、unset 类似于前两者，依赖于属性是否支持继承
+        */
+        body {
+            color: green;
+        }
+
+        .my-class-1 a {
+            color: inherit;
+        }
+
+        .my-class-2 a {
+            color: initial;
+        }
+
+        .my-class-3 a {
+            color: unset;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Default <a href="*">link</a> color</li>
+        <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+        <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+        <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+    </ul>
+</body>
+</html>
