@@ -27,6 +27,20 @@
         .my-class-3 a {
             color: unset;
         }
+
+        h2 {
+            font-size: 2em;
+            color: #000;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+                
+        .small {
+            font-size: 1em;
+        }
+                
+        .bright {
+            color: rebeccapurple;
+        } 
     </style>
 </head>
 <body>
@@ -36,5 +50,10 @@
         <li class="my-class-2">Reset the <a href="#">link</a> color</li>
         <li class="my-class-3">Unset the <a href="#">link</a> color</li>
     </ul>
+
+    <!-- 给基本元素定义通用样式，然后给不同的元素创建对应的类 -->
+    <h2>Heading with no class</h2>
+    <h2 class="small">Heading with class of small</h2>
+    <h2 class="bright">Heading with class of bright</h2>
 </body>
 </html>
