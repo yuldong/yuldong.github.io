@@ -1,0 +1,11 @@
+/* 
+    types of selectors:
+    1、Type, class, and ID selectors
+    h1, .box, #unique
+    2、Attribute selectors
+    a[title], a[href="https://yrion.com"]
+    3、Pseudo-classes and pseudo-elements
+    a:hover, p::first-line
+    4、Combinators
+    article > p, article p, h1 + p, h1 ~ p
+*/
