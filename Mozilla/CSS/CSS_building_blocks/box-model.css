@@ -1,0 +1,87 @@
+/* 
+    block:
+    - 行内方向扩展病占据父容器在该方向上的所有可用空间，绝大情况与父容器同宽。
+    - 每个盒子都会换行。
+    - width && height 属性可发挥作用
+    - padding && margin && border 会将其他元素从当前盒子周围“推开”。
+
+    inline:
+    - 盒子不会换行。
+    - width && height 属性不起作用。
+    - padding && margin && border 被应用但是不会把其他处于inline状态的盒子推开。
+
+    **通过display属性设置对外显示的类型。**
+    **inline-block: 在inline与block之间提供一个中间状态。
+    width && height 生效、
+    padding && margin && border 会推开其他元素、
+    但是，不会跳转到新行。
+    **
+*/
+
+/* inline-block */
+
+.links-list a {
+    background-color: rgb(179, 57, 81);
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    display: inline-block;
+}
+
+.links-list a:hover {
+    background-color: rgb(66, 28, 40);
+    color: #fff;
+}
+
+/* block && inline */
+
+p, 
+ul {
+    border: 2px solid rebeccapurple;
+}
+
+.block, 
+li {
+    border: 2px solid blue;
+    padding: .5em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.block {
+    display: block;
+}
+
+span {
+    border: 2px solid blue;
+}
+
+.newUL {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+.inline {
+    display: inline;
+}
+
+/* box */
+
+.box {
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+    padding: 2em;
+    margin: 2em;
+    width: 20em;
+    height: 10em;
+}
+
+.alternate {
+    box-sizing: border-box;
+}
+
