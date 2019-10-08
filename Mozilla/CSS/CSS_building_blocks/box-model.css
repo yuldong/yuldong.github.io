@@ -123,3 +123,9 @@ h2 {
     border-top: 2px dotted rebeccapurple;
     border-bottom: 1em double rgb(24, 163, 78);
 }
+
+/* overflow */
+/* values and units */
+/* rgb and hsl */
+/* min- sizes 处理文字高度可变的方案*/
+/* max- sizes 防止图片被拉伸的方案 */
