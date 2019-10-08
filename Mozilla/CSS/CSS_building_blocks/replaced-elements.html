@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout Replaced Elements</title>
+    <style>
+        .warpped {
+            display: flex;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid rebeccapurple;
+            margin: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .contain {
+            /* width: 100%;
+            height: 100%; */
+            object-fit: contain;
+        }
+
+        .cover {
+            /* width: 100%;
+            height: 100%; */
+            object-fit: cover;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: 20px;
+        }
+
+        .wrapper > img {
+            height: auto;
+            width: auto;
+        }
+
+        .wrapper > div {
+            background-color: rebeccapurple;
+            border-radius: .5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="warpped">
+        <div class="box">
+            <img src="./balloons.jpeg" alt="star" class="contain">
+        </div>
+        <div class="box">
+            <img src="./balloons.jpeg" alt="balloons" class="cover">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <img src="./star.png"" alt="star">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
