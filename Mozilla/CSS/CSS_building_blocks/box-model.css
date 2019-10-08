@@ -75,13 +75,51 @@ span {
 .box {
     border: 5px solid rebeccapurple;
     background-color: lightgray;
-    padding: 2em;
+    padding: 1em;
     margin: 2em;
     width: 20em;
-    height: 10em;
+    height: 15em;
 }
 
 .alternate {
     box-sizing: border-box;
 }
 
+/* background */
+.a {
+    width: 20em;
+    height: 10em;
+    border: 1px solid red;
+    background-image: url("chat.png");
+    background-repeat: repeat-y;
+}
+
+.b {
+    width: 20em;
+    height: 2em;
+    border: 1px solid red;
+    background-image: url("chat.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+}
+
+.mixedBox {
+    width: 20em;
+    height: 20em;;
+    background: linear-gradient(105deg, rgba(255, 255, 255, .2) 39%, rgba(51, 67, 57, 1) 96%) center center / 200px 200px no-repeat, url("chat.png") center no-repeat, rebeccapurple;
+}
+
+/* borders */
+
+.border {
+    background-color: #567893;
+    border: 5px solid #0b385f;
+    border-bottom-style: dashed;
+    color: #fff;
+}
+
+h2 {
+    border-top: 2px dotted rebeccapurple;
+    border-bottom: 1em double rgb(24, 163, 78);
+}
