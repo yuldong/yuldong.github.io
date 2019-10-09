@@ -129,3 +129,45 @@ h2 {
 /* rgb and hsl */
 /* min- sizes 处理文字高度可变的方案*/
 /* max- sizes 防止图片被拉伸的方案 */
+
+/* box-shadow */
+button {
+    margin: 2em 1em;
+
+    width: 150px;
+    font-size: 1.1rem;
+    line-height: 2;
+    border-radius: 10px;
+    border: none;
+    background-image: linear-gradient(to bottom right, #777, #ddd);
+    box-shadow: 1px 1px 1px black,
+                inset 2px 3px 5px rgba(255, 255, 255, 0.5);
+}
+
+button:focus, button:hover {
+    background-image: linear-gradient(to bottom right, #888, #eee);
+}
+
+button:active {
+    box-shadow: inset 2px 2px 1px black,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+}
+
+.filterP {
+    margin: 1rem auto;
+    padding: 20px;
+    width: 100px;
+    border: 5px dashed red;
+}
+
+.filter {
+    -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+}
+
+.box-shadow {
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+/* Blend modes && -webkit-background-clip: text; */
