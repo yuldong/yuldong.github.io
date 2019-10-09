@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>格式化链接</title>
+    <style>
+        body, html {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul {
+            padding: 0;
+            width: 100%;
+        }
+
+        li {
+            display: inline;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            width: 19.5%;
+            margin-right: 0.625%;
+            text-align: center;
+            color: black;
+            outline: none;
+            line-height: 3;
+        }
+
+        li:last-child a {
+            margin-right: 0;
+        }
+
+        a:link, a:visited, a:focus {
+            background: yellow;
+        }
+
+        a:hover {     
+            background: orange;
+        }
+
+        a:active {
+            background: red;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字</title>
+    <style>
+        /* Web 字体
+           @font-face {
+                font-family: "myFont";
+                src: url("myFont.ttf");
+           }
+}
+        */
+        html {
+            font-size: 10px;
+        }
+        h1 {
+            font-size: 2.6rem;
+            text-transform: capitalize;
+            text-shadow: -1px -1px 1px #aaa,
+                         0px 4px 1px rgba(0,0,0,0.5),
+                         4px 4px 5px rgba(0,0,0,0.7),
+                         0px 0px 7px rgba(0,0,0,0.4);
+                         text-align: center;
+        }
+
+        h1 + p {
+            font-weight: bold;
+        }
+
+        p {
+            color: red;
+            font-family: fantasy, sans-serif;
+            font-size: 2rem;
+            text-transform: lowercase;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+        }
+        .custom {
+            text-decoration: line-through  blue;
+            text-decoration-style: wavy;
+            font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <p class="custom">My paragraph</p>
+    </article>
+    <h1>Tommy the cat</h1>
+
+    <p>I remember as if it were a meal ago...</p>
+        
+    <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
+         may have nestled its way into his mighty throat. Many a fat alley rat 
+        had met its demise while staring point blank down the cavernous barrel of
+         this awesome prowling machine. Truly a wonder of nature this urban 
+        predator — Tommy the cat had many a story to tell. But it was a rare 
+        occasion such as this that he did.</p>
+</body>
+</html>
