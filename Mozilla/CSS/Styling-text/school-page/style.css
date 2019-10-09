@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 100rem;
+    max-width: 140rem;
+    line-height: 1.5;
+}
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+}
+
+header, section, aside, nav, footer {
+    padding: 20px;
+}
+
+header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+header {
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+body {
+    letter-spacing: 0.1rem;
+    word-spacing: 0.15rem;
+}
+
+section h2 + p {
+    text-indent: 2rem;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+a:link, a:visited, a:focus, a:hover {
+    color: #a66;
+}
+
+section p a {
+    background: url(link.png) no-repeat 100% 0;
+    background-size: 1rem 1rem;
+    padding-right: 1rem;
+}
+
+aside ul {
+    list-style-type: square;
+}
+
+aside ul li {
+    padding: 0.1rem 0;
+}
+
+nav ul {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    outline: none;
+    line-height: 3;
+    border: 0.1rem solid #a66;
+    margin: 0.5rem 0;
+}
+
+nav li a:focus, nav li a:hover {
+    color: white;
+    background: #a66;
+}
+
+nav li a:active {
+    color: white;
+    background: black;
+}
