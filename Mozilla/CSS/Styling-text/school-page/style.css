@@ -77,6 +77,10 @@ aside ul li {
     padding: 0.1rem 0;
 }
 
+aside ul li a:active {
+    color: rgb(158, 6, 6);
+}
+
 nav ul {
     padding: 0;
     width: 100%;
