@@ -26,17 +26,24 @@ img {
     margin: 0 auto;
     padding: 0 2rem;
     max-width: 98rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
 }
 
 nav {
     background-color: #000;
     padding: .6rem;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav a {
@@ -45,42 +52,22 @@ nav a {
     padding: .6rem 1.2rem;
 }
 
-nav {
-    position: sticky;
-}
-
 .photos {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.feature {
-    width: 20rem;
-}
-
-nav ul {
-    display: flex;
-    flex: 1;
-}
-
-nav ul li {
-    width: 20%;
-}
-
-main {
-    display: flex;
-}
-
-.feature {
-    float: left;
-    margin-right: 0.8rem;
-}
-
-.photos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.1rem;
 }
 
+.feature {
+    width: 20rem;
+    float: left;
+    margin-right: 0.8rem;
+}
+
+footer {
+    text-align: center;
+}
 
