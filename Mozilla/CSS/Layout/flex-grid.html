@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+    <style>
+        .wrapper-flex {
+            display: flex;
+        }
+
+        .box {
+            background-color: antiquewhite;
+            line-height: 4;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .wrapper-flex > div {
+            flex: 1;
+        }
+
+        .wrapper-grid {
+            margin: 1rem 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 200px 100px;
+            grid-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper-flex">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three</div>
+    </div>
+    <div class="wrapper-grid">
+        <div class="box">One</div>
+        <div class="box">Two</div>
+        <div class="box">Three</div>
+        <div class="box">Four</div>
+        <div class="box">Five</div>
+        <div class="box">Six</div>
+    </div>
+</body>
+</html>
