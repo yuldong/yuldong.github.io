@@ -8,3 +8,15 @@
     table layout
     multiple-column layout
 */
+
+/* float:
+    left, right, none, inherit
+*/
+
+/* position:
+    static, 默认规则
+    relative, 相对normal flow
+    absolute, 相对于html或者被定位的祖先元素
+    fixed, 相对于浏览器
+    sticky, 
+*/

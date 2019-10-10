@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Postion</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+            background-color: beige;
+        }
+
+        body div {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgb(121, 121, 35);
+        }
+
+        p {
+            background-color: antiquewhite;
+            border: 2px solid aliceblue;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .positioned {
+            position: relative;
+            background-color: rgba(255, 84, 104, .3);
+            border: 2px solid rgb(255, 84, 104);
+            top: 30px;
+            left: 30px;
+        }
+
+        .positioned-absolute {
+            position: absolute;
+            background-color: rgba(255, 84, 104, .3);
+            border: 2px solid rgb(255, 84, 104);
+            top: 50px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning</h1>
+    <p>I am a basic block level element.</p>
+    <p class="positioned">I am a basic block level element.</p>
+    <p>I am a basic block level element.</p>
+    <div>
+        <p class="positioned-absolute">I am a basic block level element.</p>
+    </div>
+
+    <p>I am a basic block level element.</p>
+</body>
+</html>
