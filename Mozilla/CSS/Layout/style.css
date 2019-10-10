@@ -20,3 +20,11 @@
     fixed, 相对于浏览器
     sticky, 
 */
+
+/* talbe layout:
+   act like table, 用于不支持 flexbox, grid 的替代方案
+*/
+
+/* Multi-column layout:
+   文字分列
+*/
