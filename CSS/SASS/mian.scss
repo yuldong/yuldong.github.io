@@ -1,0 +1,143 @@
+// https://sassmeister.com[]
+// 使用变量
+$highlight-color: #f90;
+$basic-border: 1px solid $highlight-color;
+$plain-font: 'Helvetica Neue', 'Liberation Sans', Arial;
+
+// 变量使用范围
+$nav-color: #f90;
+nav {
+    $width: 100px;
+    width: $width;
+    color: $nav-color;
+}
+
+// 变量引用
+.selected {
+    border: $basic-border;
+}
+
+// 支持中划线、下划线
+$link-color: blue;
+a {
+    color: $link_color;
+}
+
+// 嵌套CSS规则
+// css 写法
+// #content article h1 {
+//     color: #333;
+// }
+
+// #content article p {
+//     margin-bottom: 1.4em;
+// }
+
+// #content aside {
+//     background: #eee;
+// }
+
+// sass 写法
+#content {
+    article {
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 1.4em;
+        }
+    }
+    aside {
+        background: #eee;
+    }
+}
+
+// 父选择器的标识符 &
+article a {
+    color: blue;
+    &:hover {
+        color: red;
+    }
+}
+
+// 群组选择器的嵌套
+.container {
+    h1, h2, h3 {
+        margin-bottom: .8em;
+    }
+}
+
+nav, aside {
+    a {
+        color: blue;
+    }
+}
+
+// 子组合选择器和同层组合选择器: >, + 以及 ～;
+article {
+    ~ article {
+        border-top: 1px dashed #ccc;
+    }
+    > section {
+        background: #eee;
+    }
+    dl > {
+        dt { color: #333; }
+        dd { color: #555 }
+    }
+    nav + & {
+        margin-top: 0;
+    }
+}
+
+// 嵌套属性
+// 规则：属性名从中划线断开，在根属性后面添加冒号
+nav {
+    border: {
+        style: solid;
+        width: 1px;
+        color: #ccc;
+    }
+}
+
+// @import
+// 局部导入，默认文件命名约定，default
+
+// 静默注释
+
+/*保持sass条理性、可读性的最基本三个方法：嵌套、导入、注释*/
+
+// 混合器
+@mixin rounded-corners {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+notice {
+    background-color: green;
+    border: 2px solid #00aa00;
+    @include rounded-corners;
+}
+
+// 混合器的合理使用
+// 给混合器传参
+@mixin link-colors($normal, $hover, $visited) {
+    color: $normal;
+    &:hover {
+        color: $hover;
+    }
+    &:visited {
+        color: $visited;
+    }
+}
+
+a {
+    @include link-colors(blue, red, green)
+}
+
+// $name: value的形式指定参数
+// 默认参数值 $normal
+@mixin link-colors($normal, $hover: $normal, $visited: $normal) {
+    color: $normal;
+}

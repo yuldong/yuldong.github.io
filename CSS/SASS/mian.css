@@ -1,0 +1,70 @@
+nav {
+  width: 100px;
+  color: #f90;
+}
+.selected {
+  border: 1px solid #f90;
+}
+a {
+  color: blue;
+}
+#content article h1 {
+  color: #333;
+}
+#content article p {
+  margin-bottom: 1.4em;
+}
+#content aside {
+  background: #eee;
+}
+article a {
+  color: blue;
+}
+article a:hover {
+  color: red;
+}
+.container h1,
+.container h2,
+.container h3 {
+  margin-bottom: 0.8em;
+}
+nav a,
+aside a {
+  color: blue;
+}
+article ~ article {
+  border-top: 1px dashed #ccc;
+}
+article > section {
+  background: #eee;
+}
+article dl > dt {
+  color: #333;
+}
+article dl > dd {
+  color: #555;
+}
+nav + article {
+  margin-top: 0;
+}
+nav {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+}
+notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+a {
+  color: blue;
+}
+a:hover {
+  color: red;
+}
+a:visited {
+  color: green;
+}
