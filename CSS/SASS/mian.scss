@@ -120,7 +120,7 @@ notice {
     @include rounded-corners;
 }
 
-// 混合器的合理使用
+// 混合器的合理使用 @mixin, @include
 // 给混合器传参
 @mixin link-colors($normal, $hover, $visited) {
     color: $normal;
@@ -141,3 +141,25 @@ a {
 @mixin link-colors($normal, $hover: $normal, $visited: $normal) {
     color: $normal;
 }
+
+// 选择器继承 @extend
+.error {
+    border: 1px solid red;
+    background-color: #fdd;
+}
+
+.serioueError {
+    @extend .error;
+    border-width: 3px;
+}
+
+.error a {
+    color: red;
+    font-weight: 100;
+  }
+
+  h1.error {
+      font-size: 1.2rem;
+  }
+
+

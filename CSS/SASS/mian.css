@@ -68,3 +68,20 @@ a:hover {
 a:visited {
   color: green;
 }
+.error,
+.serioueError {
+  border: 1px solid red;
+  background-color: #fdd;
+}
+.serioueError {
+  border-width: 3px;
+}
+.error a,
+.serioueError a {
+  color: red;
+  font-weight: 100;
+}
+h1.error,
+h1.serioueError {
+  font-size: 1.2rem;
+}
