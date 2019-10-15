@@ -21,17 +21,29 @@ main section aside ul {
   flex-direction: column;
   justify-content: flex-start;
   list-style: none;
-  border: 0.1rem solid antiquewhite;
   border-radius: 0.5rem;
-}
-main section aside ul li {
-  padding: 0.6rem 0;
 }
 main section aside ul li a {
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  line-height: 2;
+  border: 0.1rem solid #a66;
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+}
+main section aside ul li a:link,
+main section aside ul li a:visited {
+  color: #a66;
 }
 main section aside ul li a:hover,
 main section aside ul li a:focus {
-  color: antiquewhite;
-  background-color: black;
+  color: white;
+  background: #a66;
+}
+main section aside ul li a:active {
+  color: white;
+  background: black;
 }

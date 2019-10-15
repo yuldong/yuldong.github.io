@@ -22,16 +22,28 @@ main section {
             flex-direction: column;
             justify-content: flex-start;
             list-style: none;
-            border: 0.1rem solid antiquewhite;
             border-radius: .5rem;
             li {
-                // background: black;
-                padding: .6rem 0;
                 a {
                     text-decoration: none;
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    outline: none;
+                    line-height: 2;
+                    border: 0.1rem solid #a66;
+                    margin: 0.5rem 0;
+                    padding: 0 .5rem;
+                    &:link, &:visited {
+                        color: #a66;
+                    }
                     &:hover, &:focus {
-                        color: antiquewhite;
-                        background-color: black;
+                        color: white;
+                        background: #a66;
+                    }
+                    &:active {
+                        color: white;
+                        background: black;
                     }
                 }
             }
