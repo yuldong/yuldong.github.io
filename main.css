@@ -1,51 +1,41 @@
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
-
 body {
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    font-size: 1.4rem;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 .logo {
-    font-size: 200%;
-    padding: 5rem 1rem;
-    margin: 0 auto;
-    max-width: 98rem;
+  font-size: 200%;
+  padding: 5rem 1rem;
+  margin: 0 auto;
+  max-width: 98rem;
 }
-
 nav {
-    background-color: #000;
-    padding: .6rem;
-    position: sticky;
-    top: 0;
+  background-color: #000;
+  padding: 0.6rem;
+  position: sticky;
+  top: 0;
 }
-
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: .6rem 1.2rem;
+nav ul li a {
+  text-decoration: none;
+  line-height: 2.5;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  background: black;
 }
-
-li a {
-    text-decoration: none;
-    line-height: 2.5;
-    color: white;
-    background: black;
-}
-
-li a:focus, li a:hover {
-    background: #333;
-    color: antiquewhite;
+nav ul li a:hover,
+nav ul li a:focus {
+  background: #333;
+  color: antiquewhite;
 }

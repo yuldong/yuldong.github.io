@@ -1,31 +1,37 @@
-@import "../main.css";
-
 .title {
-    font-size: 200%;
-    text-align: center;
-    padding: 3rem 2rem;
-    margin: 0 auto;
-    max-width: 98rem;
+  font-size: 200%;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 98rem;
 }
-
 main section {
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-
-aside {
-    padding: 2rem 2rem;
+main section aside {
+  padding: 2rem 2rem;
 }
-
-aside h2 {
-    text-align: center;
+main section aside h2 {
+  text-align: center;
 }
-
-aside ul {
-    list-style: none;
+main section aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  border: 0.1rem solid antiquewhite;
+  border-radius: 0.5rem;
 }
-
-aside ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
+main section aside ul li {
+  padding: 0.6rem 0;
+}
+main section aside ul li a {
+  text-decoration: none;
+}
+main section aside ul li a:hover,
+main section aside ul li a:focus {
+  color: antiquewhite;
+  background-color: black;
 }

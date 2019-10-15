@@ -1,0 +1,40 @@
+// @import "_common";
+
+.title {
+    font-size: 200%;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 98rem;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    aside {
+        padding: 2rem 2rem;
+        h2 {
+            text-align: center;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            list-style: none;
+            border: 0.1rem solid antiquewhite;
+            border-radius: .5rem;
+            li {
+                // background: black;
+                padding: .6rem 0;
+                a {
+                    text-decoration: none;
+                    &:hover, &:focus {
+                        color: antiquewhite;
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}
