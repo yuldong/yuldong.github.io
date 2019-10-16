@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阿里百秀</title>
+    <style>
+        .container {
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 767px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 响应式开发，首先需要一个布局容器 -->
+    <div class="container"></div>
+</body>
+</html>
