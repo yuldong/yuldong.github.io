@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>示例</title>
+    <style>
+        .vertical-box {
+            display: flex;
+            width: 200px;
+            height: 200px;
+            flex-flow: column;
+        }
+        .horizontal-box {
+            display: flex;
+            flex-flow: row;
+
+        }
+        .spacer1 {
+            flex: auto;
+            background-color: blue;
+        }
+        .spacer2 {
+            flex: auto;
+            background-color: blueviolet;
+        }
+        .spacer3 {
+            flex: auto;
+            background-color: orange;
+        }
+        .spacer4 {
+            flex: auto;
+            background-color: orchid;
+        }
+        .centered-element {
+            /* flex: none; */
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-box">
+        <div class="spacer1"></div>
+        <div class="centered-element horizontal-box">
+            <div class="spacer2"></div>
+            <div class="centered-element">Centered content</div>
+            <div class="spacer3"></div>
+        </div>
+        <div class="spacer4"></div>
+    </div>
+</body>
+</html>
