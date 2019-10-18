@@ -51,3 +51,34 @@ nav ul li a {
 .push-right {
   margin-left: auto;
 }
+.box {
+  display: flex;
+  width: 200px;
+  border: 1px solid #edacea;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.box > * {
+  flex: 1 1 auto;
+  background-color: aquamarine;
+  border: 1px solid #edacea;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+.relative {
+  background-color: #edacea;
+  height: 100px;
+}
+.relative > p {
+  background-color: aqua;
+  height: 20px;
+  margin: 0;
+}
+.relative > p:nth-child(2) {
+  position: relative;
+  background-color: antiquewhite;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+}
