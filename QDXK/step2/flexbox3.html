@@ -5,41 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>示例</title>
-    <style>
-        .vertical-box {
-            display: flex;
-            width: 200px;
-            height: 200px;
-            flex-flow: column;
-        }
-        .horizontal-box {
-            display: flex;
-            flex-flow: row;
-
-        }
-        .spacer1 {
-            flex: auto;
-            background-color: blue;
-        }
-        .spacer2 {
-            flex: auto;
-            background-color: blueviolet;
-        }
-        .spacer3 {
-            flex: auto;
-            background-color: orange;
-        }
-        .spacer4 {
-            flex: auto;
-            background-color: orchid;
-        }
-        .centered-element {
-            /* flex: none; */
-            background-color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="flexbox.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3 is longer</a></li>
+            <li class="push-right"><a href="#">Page 4</a></li>
+        </ul>
+    </nav>         
+                  
     <div class="vertical-box">
         <div class="spacer1"></div>
         <div class="centered-element horizontal-box">

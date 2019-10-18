@@ -1,0 +1,53 @@
+.vertical-box {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  flex-flow: column;
+}
+.horizontal-box {
+  display: flex;
+  flex-flow: row;
+}
+.spacer1 {
+  flex: auto;
+  background-color: blue;
+}
+.spacer2 {
+  flex: auto;
+  background-color: blueviolet;
+}
+.spacer3 {
+  flex: auto;
+  background-color: orange;
+}
+.spacer4 {
+  flex: auto;
+  background-color: orchid;
+}
+.centered-element {
+  background-color: white;
+}
+nav {
+  border: 1px solid #edacea;
+  border-radius: 5px;
+  margin: 5px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0 -10px;
+  background-color: beige;
+}
+nav ul li {
+  padding: 5px;
+  margin: 5px 10px;
+  list-style: none;
+  border: 1px solid #edacea;
+  border-radius: 5px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+.push-right {
+  margin-left: auto;
+}
