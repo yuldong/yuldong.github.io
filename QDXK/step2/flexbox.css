@@ -1,0 +1,84 @@
+.vertical-box {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  flex-flow: column;
+}
+.horizontal-box {
+  display: flex;
+  flex-flow: row;
+}
+.spacer1 {
+  flex: auto;
+  background-color: blue;
+}
+.spacer2 {
+  flex: auto;
+  background-color: blueviolet;
+}
+.spacer3 {
+  flex: auto;
+  background-color: orange;
+}
+.spacer4 {
+  flex: auto;
+  background-color: orchid;
+}
+.centered-element {
+  background-color: white;
+}
+nav {
+  border: 1px solid #edacea;
+  border-radius: 5px;
+  margin: 5px;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0 -10px;
+  background-color: beige;
+}
+nav ul li {
+  padding: 5px;
+  margin: 5px 10px;
+  list-style: none;
+  border: 1px solid #edacea;
+  border-radius: 5px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+.push-right {
+  margin-left: auto;
+}
+.box {
+  display: flex;
+  width: 200px;
+  border: 1px solid #edacea;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.box > * {
+  flex: 1 1 auto;
+  background-color: aquamarine;
+  border: 1px solid #edacea;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+.relative {
+  background-color: #edacea;
+  height: 100px;
+}
+.relative > p {
+  background-color: aqua;
+  height: 20px;
+  margin: 0;
+}
+.relative > p:nth-child(2) {
+  position: relative;
+  background-color: antiquewhite;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+}
