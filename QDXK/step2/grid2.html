@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid 基本概念</title>
+    <style>
+        /* fr单位代表网格容器中可用空间的一等份 */
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 50px repeat(6, 1fr) 50px; */
+            grid-template-columns: repeat(2, 1fr 2fr);
+            /* grid-auto-rows: 200px; */
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .border {
+            border: 1px solid burlywood;
+            border-radius: 5px;
+            background-color: antiquewhite;
+            padding: 10px 10px;
+            line-height: 2;
+        }
+
+        .wrapper > div {
+            border: 1px solid burlywood;
+            border-radius: 5px;
+            margin: 2px 2px;
+            background-color: bisque;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper border">
+        <div>One</div>
+        <div>Two
+            <p>I have some more content in.</p>
+            <p>This maks me taller than 100 pixels.</p>
+        </div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+        <div>Nine</div>
+        <div>Ten</div>
+    </div>
+</body>
+</html>
