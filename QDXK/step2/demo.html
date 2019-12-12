@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .header {
+            display: flex;
+            flex-direction: column;
+            background-color: bisque;
+            height: 20%;
+        }
+        .header h1 {
+            text-align: center;
+            margin: 0 auto;
+            line-height: 2.5;
+        }
+        .header_bottom {
+            margin-bottom: -10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .nick {
+            margin-right: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: aquamarine;
+            line-height: 3;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+        .main > div {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 6fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: 
+            "photo nick" 
+            "photo message" 
+            "photo img"
+            "photo timeline"
+            "photo comment";
+        }
+
+        .main_photo {
+            background-color: aqua;
+            grid-area: photo;
+        }
+        .main_nick {
+            background-color: blue;
+            grid-area: nick;
+        }
+        .main_message {
+            background-color: blueviolet;
+            grid-area: message;
+        }
+        .main_img {
+            background-color: brown;
+            grid-area: img;
+        }
+        .main_timeline {
+            background-color: aqua;
+            grid-area: timeline;
+            display: flex;
+            justify-content: space-between;
+        }
+        .main_comment {
+            background-color: antiquewhite;
+            grid-area: comment;
+        }
+
+        .main_comment > div {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>前端小课</h1>
+        <div class="header_bottom">
+            <p class="nick">yrion(plus)</p>
+            <div class="logo">ICON</div>
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <div class="main_photo">IMG</div>
+            <p class="main_nick">Nick Name</p>
+            <p class="main_message">该条朋友圈来自澳大利亚，不翻墙可能看不到哦。</p>
+            <div class="main_img"></div>
+            <div class="main_timeline">
+                <p>2小时前</p>
+                <img src="circle.png" alt="点我有惊喜">
+            </div>
+            <div class="main_comment">
+                <div>
+                    <img src="heart.png" alt="点我有惊喜">
+                    <p>替补程序员</p>
+                </div>
+                <p>
+                    job: <span>虽然没看懂，感觉很厉害。</span>
+                </p>
+            </div>
+        </div>
+        <div>
+            <div>IMG</div>
+            <p>Nick Name</p>
+            <p>该条朋友圈来自澳大利亚，不翻墙可能看不到哦。</p>
+            <div></div>
+            <div>
+                <p>2小时前</p>
+                <img src="circle.png" alt="点我有惊喜">
+            </div>
+        </div>
+    </div>
+    <div class="footer">到底了</div>
+</body>
+</html>
