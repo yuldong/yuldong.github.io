@@ -39,19 +39,19 @@
     }
 
     // 根据不同的终端，跳转到不同的地址
-    var theUrl = 'https://itunes.apple.com/app/id1525107458';
+    var theUrl = 'url';
     if(Terminal.platform.android){//安卓端
-        var ua = window.navigator.userAgent.toLocaleLowerCase()
-
+        var ua = window.navigator.userAgent.toLocaleLowerCase();
         if(ua.match(/vivo/i) == "vivo"){
             theUrl = 'https://h5coml.vivo.com.cn/h5coml/appdetail_h5/browser_v2/index.html?appId=2905825&resource=301&source=7';
         }
         if(ua.match(/huawei/i) == "huawei"){
             theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
         }
-        if(ua.match(/iphone/i) == "iphone"){
-            theUrl = 'market://details?id=com.hainayun.haikehui';
-        }
+        alert(theUrl + ua);
+        setTimeout(function () {
+            location = theUrl;
+        }, 2000);
     } else {
         if(Terminal.platform.iPhone){//iPhone端
             theUrl = 'https://itunes.apple.com/app/app/id1525107458';
@@ -70,9 +70,8 @@
                 default://iPad默认APP Store地址
                     theUrl = 'https://itunes.apple.com/app/id1525107458';
             }
+            location.href = theUrl;
         }
-
-        location.href = theUrl;
     }
     
 </script>
