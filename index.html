@@ -42,10 +42,14 @@
     var theUrl = 'url';
     if(Terminal.platform.android){//安卓端
         var ua = window.navigator.userAgent.toLocaleLowerCase();
+        alert(ua);
         if(ua.match(/vivo/i) == "vivo"){
             theUrl = 'https://h5coml.vivo.com.cn/h5coml/appdetail_h5/browser_v2/index.html?appId=2905825&resource=301&source=7';
         }
         if(ua.match(/huawei/i) == "huawei"){
+            theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
+        }
+        if(ua.match(/hornor/i) == "hornor"){
             theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
         }
         if(ua.match(/mi/i) == "mi"){
