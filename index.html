@@ -48,12 +48,16 @@
         if(ua.match(/huawei/i) == "huawei"){
             theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
         }
+        if(ua.match(/mi/i) == "mi"){
+            theUrl = 'mimarket://details?id=com.hainayun.nayun';
+        }
+        alert(theUrl);
         setTimeout(function () {
             location.href = theUrl;
         }, 2000);
     } else {
         if(Terminal.platform.iPhone){//iPhone端
-            theUrl = 'https://itunes.apple.com/app/app/id1525107458';
+            theUrl = 'https://itunes.apple.com/app/id1525107458';
         }else if(Terminal.platform.iPad){//iPad端
             // 还可以通过language，区分开多国语言版
             switch(Terminal.language){
@@ -69,7 +73,10 @@
                 default://iPad默认APP Store地址
                     theUrl = 'https://itunes.apple.com/app/id1525107458';
             }
-            location.href = theUrl;
+            alert(theUrl);
+            setTimeout(function () {
+                location.href = theUrl;
+            }, 2000);
         }
     }
     
