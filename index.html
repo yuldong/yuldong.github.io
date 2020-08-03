@@ -24,7 +24,7 @@
     var Terminal = {
         // 辨别移动终端类型
         platform : function(){
-            var u = navigator.userAgent, app = navigator.appVersion;
+            var u = navigator.userAgent.toLocaleLowerCase(), app = navigator.appVersion;
             return {
                 // android终端或者uc浏览器
                 android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
