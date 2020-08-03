@@ -44,6 +44,7 @@
     // 根据不同的终端，跳转到不同的地址
     var theUrl = 'url';
     alert(navigator.userAgent.toLocaleLowerCase());
+    alert(Terminal.platform);
     if(Terminal.platform.android){//安卓端
         theUrl = "";
         if(Terminal.platform.vivo){
