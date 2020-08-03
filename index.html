@@ -27,14 +27,14 @@
             var u = navigator.userAgent.toLocaleLowerCase(), app = navigator.appVersion;
             return {
                 // android终端或者uc浏览器
-                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                android: u.indexOf('android') > -1 || u.indexOf('linux') > -1,
                 huawei: u.indexOf('huawei') > -1 || u.indexOf('hornor') > -1,
                 vivo: u.indexOf('vivo') > -1,
                 xiaomi: u.indexOf('mi') > -1,
                 // 是否为iPhone或者QQHD浏览器
-                iPhone: u.indexOf('iPhone') > -1 ,
+                iPhone: u.indexOf('iphone') > -1 ,
                 // 是否iPad
-                iPad: u.indexOf('iPad') > -1
+                iPad: u.indexOf('ipad') > -1
             };
         }(),
         // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
