@@ -40,13 +40,11 @@
         // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
         language : (navigator.browserLanguage || navigator.language).toLowerCase()
     }
-
+    alert(navigator.userAgent);
+    alert(navigator.appVersion);
     // 根据不同的终端，跳转到不同的地址
-    var theUrl = 'url';
-    alert(navigator.userAgent.toLocaleLowerCase());
-    alert(Terminal.platform);
     if(Terminal.platform.android){//安卓端
-        theUrl = "";
+        var theUrl = "https://appgallery1.huawei.com/#/app/C102568149";
         if(Terminal.platform.vivo){
             theUrl = 'https://h5coml.vivo.com.cn/h5coml/appdetail_h5/browser_v2/index.html?appId=2905825&resource=301&source=7';
         }
@@ -56,11 +54,9 @@
         if(Terminal.platform.xiaomi){
             theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
         }
-        alert(theUrl);
-        setTimeout(function () {
-            location.href = theUrl;
-        }, 2000);
+        location.href = theUrl;
     } else {
+        var theUrl = "https://itunes.apple.com/app/id1525107458";
         if(Terminal.platform.iPhone){//iPhone端
             theUrl = 'https://itunes.apple.com/app/id1525107458';
         }else if(Terminal.platform.iPad){//iPad端
@@ -80,10 +76,7 @@
                     // https://apps.apple.com/cn/app/%E7%BA%B3%E4%BA%91/id1525107458
             }
         }
-        alert(theUrl);
-        setTimeout(function () {
-            location.href = theUrl;
-        }, 2000);
+        location.href = theUrl;
     }
     
 </script>
