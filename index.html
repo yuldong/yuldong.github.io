@@ -30,7 +30,7 @@
                 android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
                 huawei: u.match(/huawei/i) == "huawei" || u.match(/hornor/i) == "hornor",
                 vivo: u.match(/vivo/i) == "vivo",
-                xiaomi: u.match(/xiaomi/i) == "xiaomi",
+                xiaomi: u.match(/mi/i) == "mi",
                 // 是否为iPhone或者QQHD浏览器
                 iPhone: u.indexOf('iPhone') > -1 ,
                 // 是否iPad
@@ -45,6 +45,7 @@
     var theUrl = 'url';
     alert(navigator.userAgent);
     if(Terminal.platform.android){//安卓端
+        theUrl = "";
         if(Terminal.platform.vivo){
             theUrl = 'https://h5coml.vivo.com.cn/h5coml/appdetail_h5/browser_v2/index.html?appId=2905825&resource=301&source=7';
         }
