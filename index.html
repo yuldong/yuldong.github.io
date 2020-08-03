@@ -28,9 +28,9 @@
             return {
                 // android终端或者uc浏览器
                 android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
-                huawei: u.match(/huawei/i) == "huawei" || u.match(/hornor/i) == "hornor",
-                vivo: u.match(/vivo/i) == "vivo",
-                xiaomi: u.match(/mi/i) == "mi",
+                huawei: u.indexOf('huawei') > -1 || u.indexOf('hornor') > -1,
+                vivo: u.indexOf('vivo') > -1,
+                xiaomi: u.indexOf('mi') > -1,
                 // 是否为iPhone或者QQHD浏览器
                 iPhone: u.indexOf('iPhone') > -1 ,
                 // 是否iPad
@@ -43,7 +43,7 @@
 
     // 根据不同的终端，跳转到不同的地址
     var theUrl = 'url';
-    alert(navigator.userAgent);
+    alert(navigator.userAgent.toLocaleLowerCase());
     if(Terminal.platform.android){//安卓端
         theUrl = "";
         if(Terminal.platform.vivo){
