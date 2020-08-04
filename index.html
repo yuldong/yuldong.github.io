@@ -40,7 +40,6 @@
         // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
         language : (navigator.browserLanguage || navigator.language).toLowerCase()
     }
-    alert(navigator.userAgent);
     // 根据不同的终端，跳转到不同的地址
     if(Terminal.platform.android){//安卓端
         var theUrl = "https://appgallery1.huawei.com/#/app/C102568149";
@@ -72,7 +71,6 @@
                     break;
                 default://iPad默认APP Store地址
                     theUrl = 'https://itunes.apple.com/app/id1525107458';
-                    // https://apps.apple.com/cn/app/%E7%BA%B3%E4%BA%91/id1525107458
             }
         }
         location.href = theUrl;
