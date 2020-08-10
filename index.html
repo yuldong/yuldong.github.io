@@ -28,9 +28,6 @@
             return {
                 // android终端或者uc浏览器
                 android: u.indexOf('android') > -1 || u.indexOf('linux') > -1,
-                huawei: u.indexOf('huawei') > -1 || u.indexOf('honor') > -1,
-                vivo: u.indexOf('vivo') > -1,
-                xiaomi: u.indexOf('mi') > -1,
                 // 是否为iPhone或者QQHD浏览器
                 iPhone: u.indexOf('iphone') > -1 ,
                 // 是否iPad
@@ -42,17 +39,7 @@
     }
     // 根据不同的终端，跳转到不同的地址
     if(Terminal.platform.android){//安卓端
-        var theUrl = "https://appgallery1.huawei.com/#/app/C102568149";
-        if(Terminal.platform.vivo){
-            theUrl = 'https://h5coml.vivo.com.cn/h5coml/appdetail_h5/browser_v2/index.html?appId=2905825&resource=301&source=7';
-        }
-        if(Terminal.platform.huawei){
-            theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
-        }
-        if(Terminal.platform.xiaomi){
-            theUrl = 'https://appgallery1.huawei.com/#/app/C102568149';
-        }
-        location.href = theUrl;
+        location.href = "https://qianduantest.oss-cn-qingdao.aliyuncs.com/nayun_1.0.5.apk";
     } else {
         var theUrl = "https://itunes.apple.com/app/id1525107458";
         if(Terminal.platform.iPhone){//iPhone端
